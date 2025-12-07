@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مشروبات ساخنة</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>المشروبات الساخنة</h1>
+    <a href="index.html" class="back-btn">رجوع</a>
+</header>
+
+<main class="container">
+    <section class="items grid-3">
+        <div class="item-card" onclick="openPopup('قهوة تركي','قهوة تركية على المزاج.', getPrice('hot.turkish'))">
+            <h3>قهوة تركي</h3>
+            <p>قهوة تركية على المزاج.</p>
+            <span class="price" data-price-key="hot.turkish">--</span>
+        </div>
+
+        <div class="item-card" onclick="openPopup('كابتشينو','حليب رغوي مع إسبرسو.', getPrice('hot.cappuccino'))">
+            <h3>كابتشينو</h3>
+            <p>حليب رغوي مع إسبرسو.</p>
+            <span class="price" data-price-key="hot.cappuccino">--</span>
+        </div>
+
+        <div class="item-card" onclick="openPopup('نسكافيه','نسكافيه مع حليب.', getPrice('hot.nescafe'))">
+            <h3>نسكافيه</h3>
+            <p>نسكافيه مع حليب.</p>
+            <span class="price" data-price-key="hot.nescafe">--</span>
+        </div>
+    </section>
+</main>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2 id="popup-title"></h2>
+        <p id="popup-desc"></p>
+        <span id="popup-price" class="popup-price"></span>
+        <button class="close-btn" onclick="closePopup()">إغلاق</button>
+    </div>
+</div>
+
+<script src="prices.js"></script>
+<script src="script.js"></script>
+<script>document.body.classList.add('fade-in');</script>
+</body>
+</html>

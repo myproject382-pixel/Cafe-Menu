@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>حلويات</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>الحلويات</h1>
+    <a href="index.html" class="back-btn">رجوع</a>
+</header>
+
+<main class="container">
+    <section class="items grid-3">
+        <div class="item-card" onclick="openPopup('تشيز كيك','قطعة تشيز كيك فاخرة.', getPrice('sweets.cheesecake'))">
+            <h3>تشيز كيك</h3>
+            <p>قطعة تشيز كيك فاخرة.</p>
+            <span class="price" data-price-key="sweets.cheesecake">--</span>
+        </div>
+
+        <div class="item-card" onclick="openPopup('براونيز','براونيز شوكولاتة طري ولذيذ.', getPrice('sweets.brownies'))">
+            <h3>براونيز</h3>
+            <p>براونيز شوكولاتة طري.</p>
+            <span class="price" data-price-key="sweets.brownies">--</span>
+        </div>
+    </section>
+</main>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2 id="popup-title"></h2>
+        <p id="popup-desc"></p>
+        <span id="popup-price" class="popup-price"></span>
+        <button class="close-btn" onclick="closePopup()">إغلاق</button>
+    </div>
+</div>
+
+<script src="prices.js"></script>
+<script src="script.js"></script>
+<script>document.body.classList.add('fade-in');</script>
+</body>
+</html>

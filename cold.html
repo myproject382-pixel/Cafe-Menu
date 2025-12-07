@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ار" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مشروبات باردة</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>المشروبات الباردة</h1>
+    <a href="index.html" class="back-btn">رجوع</a>
+</header>
+
+<main class="container">
+    <section class="items grid-3">
+        <div class="item-card" onclick="openPopup('عصير مانجا','مانجا فريش.', getPrice('cold.mango'))">
+            <h3>عصير مانجا</h3>
+            <p>مانجا فريش.</p>
+            <span class="price" data-price-key="cold.mango">--</span>
+        </div>
+
+        <div class="item-card" onclick="openPopup('آيس لاتيه','قهوة باردة بالحليب.', getPrice('cold.icedLatte'))">
+            <h3>آيس لاتيه</h3>
+            <p>قهوة باردة بالحليب.</p>
+            <span class="price" data-price-key="cold.icedLatte">--</span>
+        </div>
+
+        <div class="item-card" onclick="openPopup('ليمون بالنعناع','عصير منعش.', getPrice('cold.lemonMint'))">
+            <h3>ليمون بالنعناع</h3>
+            <p>عصير منعش.</p>
+            <span class="price" data-price-key="cold.lemonMint">--</span>
+        </div>
+    </section>
+</main>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2 id="popup-title"></h2>
+        <p id="popup-desc"></p>
+        <span id="popup-price" class="popup-price"></span>
+        <button class="close-btn" onclick="closePopup()">إغلاق</button>
+    </div>
+</div>
+
+<script src="prices.js"></script>
+<script src="script.js"></script>
+<script>document.body.classList.add('fade-in');</script>
+</body>
+</html>
